@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- <link rel="stylesheet" href="./css/icons.css" /> -->
+    <script
+      src="https://kit.fontawesome.com/bec07d7400.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="header" id="head">
+      <div class="navbar">
+        <div class="container">
+          <h2 class="logo">Shop<span class="spanlogo">per</span></h2>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="contContainer">
+      <div class="contactUsP">
+        <h2>Contact Us</h2>
+      </div>
+      <div id="errorMsg" class="errorMsg"></div>
+
+      <br /><br /><br />
+      <div class="formCont">
+        <form ">
+          <label for="fname">Full Name :</label>
+          <input
+            type="text"
+            id="fname"
+            name="fulltname"
+            placeholder="Your name.."
+          />
+          <label for="email">Email :</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Your Email.."
+          />
+          <label for="phone">Phone :</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Your Phone Number.."
+          />
+          <label for="subject">Your Message :</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+          ></textarea>
+          <input id="sub" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <ul>
+          <li><a href="http://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="http://www.google.com"><i class="fa-brands fa-google"></i></a></li>
+          <li><a href="http://www.twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
+
+        </ul>
+  
+        <span class="top"><a href="#head"><i class="fa-solid fa-arrow-up"></i></a></span>
+      </div>
+    </div>
+    <script src="javascript/formvalid.js"></script>
+  </body>
+</html>
