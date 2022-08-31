@@ -29,7 +29,7 @@ function slide(indexx) {
 }
 //slider end
 
-// filter startv
+// filter start
 var cartCounter = 1;
 var cart = document.getElementsByClassName("badge")[0];
 var xhr = new XMLHttpRequest();
@@ -58,7 +58,7 @@ xhr.onreadystatechange = function () {
         filter.insertAdjacentHTML(
           "afterbegin",
           `
-        <div class="card ${
+        <div style="width: 250px; height: 400px;" class="card  ${
           data[i].category.split(" ").length > 1
             ? data[i].category.split(" ")[1]
             : data[i].category.split(" ")[0]
@@ -95,7 +95,7 @@ xhr.onreadystatechange = function () {
           document
             .querySelectorAll(e.target.dataset.cont)
             .forEach(function (el) {
-              el.style.display = "inline-block";
+              el.style.display = "flex";
             });
         });
       });

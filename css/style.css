@@ -148,7 +148,7 @@ body {
 }
 
 .filtercontent {
-  text-align: justify;
+  text-align: center;
   background-color: #e3e3e3;
 }
 .filtercontent > div {
@@ -156,18 +156,19 @@ body {
 }
 
 .card {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 240px;
-  max-height: 400px;
   background-color: whitesmoke;
   margin: 12px;
-  text-align: center;
   font-family: arial;
   border-radius: 5px;
 }
 .card img {
-  width: 100px;
+  width: 75%;
+  height: 30%;
 }
 
 .price {

@@ -12,9 +12,10 @@ document.forms[0].addEventListener("submit", function (e) {
   var validName = false;
   var validEmail = false;
   var validPhone = false;
+  var msgField = false;
   msgs = [];
 
-  if (namee.value !== "" && namee.value.length <= 10) {
+  if (namee.value !== "" && isNaN(namee.value)) {
     validName = true;
     console.log("valid name");
     errorMsg.style.display = "none";
@@ -43,11 +44,23 @@ document.forms[0].addEventListener("submit", function (e) {
 
     msgs.push("Please Enter Valid Phone");
   }
+  if (msg.value !== "") {
+    msgField = true;
+    console.log("valid msg");
+    errorMsg.style.display = "none";
+  } else {
+    console.log("not valid msg");
 
-  if (validName === false || validEmail === false || validPhone === false) {
+    msgs.push("Please Enter Your Message");
+  }
+
+  if (
+    validName === false ||
+    validEmail === false ||
+    validPhone === false ||
+    msgField === false
+  ) {
     e.preventDefault();
-    console.log(msgs);
-    console.log(msgs.length);
     if (msgs.length > 0) {
       errorMsg.innerHTML = `<i class="fa-solid fa-circle-xmark"></i>  ${msgs[0]}`;
       errorMsg.style.display = "block";
@@ -58,4 +71,5 @@ document.forms[0].addEventListener("submit", function (e) {
       errorMsg.style.display = "none";
     }
   }
+  console.log(msg.value);
 });
